@@ -270,7 +270,7 @@
   @keyframes starTwinkle{0%,100%{opacity:.25}50%{opacity:1}}
   .summit-cap{position:absolute;left:50%;transform:translateX(-50%);top:-62px;font-family:var(--font-sans);font-size:8.5px;font-weight:700;letter-spacing:.5px;color:#8a98a3;white-space:nowrap;transition:color .5s}
   .summit-cap.reached{color:#218015}
-  .weeks{flex:1;display:flex;flex-direction:column-reverse;justify-content:space-between;padding:2px 0;gap:4px}
+  .weeks{flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:2px 0;gap:4px}
   .week{display:flex;align-items:center;gap:9px;font-size:12px;padding:5px 8px;border-radius:9px;border:1px solid transparent}
   .week.current{background:rgba(0,159,219,.06);border-color:rgba(0,159,219,.28)}
   .week .wk-ico{width:23px;height:23px;border-radius:7px;flex:none;display:grid;place-items:center;font-size:11px;background:#d8e6ef;color:var(--text-soft);font-weight:800}
@@ -994,3 +994,38 @@ html[data-theme="dark"] .atlas-head .min{ background:rgba(255,255,255,.08); colo
 html[data-theme="dark"] .fld input, html[data-theme="dark"] .fld select, html[data-theme="dark"] .fld textarea,
 html[data-theme="dark"] input[type=number], html[data-theme="dark"] select{ background:#0E1622; color:var(--text); border-color:#28323F; }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-shrink: 0;
+
+  background: rgba(255,247,249,.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.scroll {
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 26px 32px 60px;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 264px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}

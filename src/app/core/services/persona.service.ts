@@ -11,17 +11,22 @@ export class PersonaService {
   /** true when Super User is previewing another persona (read-only). */
   readonly viewingAs = signal(false);
 
-  readonly persona = computed<Persona>(() => this.personas.find(p => p.key === this.current())!);
+  readonly persona = computed<Persona>(() => this.personas.find((p) => p.key === this.current())!);
   readonly nav = computed<NavItem[]>(() => NAV[this.current()]);
   readonly notifications = computed<Notif[]>(() => NOTIFS[this.current()]);
   readonly myName = computed(() => this.persona().name);
 
   byKey(key: PersonaKey): Persona {
-    return this.personas.find(p => p.key === key)!;
+    return this.personas.find((p) => p.key === key)!;
   }
 
   setPersona(key: PersonaKey, fromSuper = false): void {
     this.current.set(key);
     this.viewingAs.set(fromSuper && key !== 'superuser');
   }
+
+  readonly roleTag = computed(() => {
+    const p = this.persona();
+    return `${p.role} · ${p.desc}`;
+  });
 }

@@ -181,6 +181,7 @@ export const NAV: Record<PersonaKey, NavItem[]> = {
   trainee: [
     { path: '/trainee/dashboard', label: 'Dashboard', icon: 'grid' },
     { path: '/trainee/my-climb', label: 'My Climb', icon: 'trendup' },
+    {path: '/trainee/courses', label: 'Courses', icon: 'book'},
     { path: '/trainee/schedule', label: 'Schedule', icon: 'cal' },
     { path: '/trainee/progress', label: 'Progress & Certification', icon: 'award' },
     { path: '/trainee/people', label: 'People', icon: 'people' },

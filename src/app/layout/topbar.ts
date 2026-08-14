@@ -59,10 +59,9 @@ const PLACEHOLDERS: Record<PersonaKey, string> = {
         </button>
 
         <div class="persona-switch">
-          <button class="ps-btn" (click)="toggleSwitcher($event)">
+          <button class="ps-btn" title="Switch login (demo)" (click)="toggleSwitcher($event)">
             <span class="dot" [style.background]="persona.persona().color"></span>
             <span class="ps-name">{{ persona.viewingAs() ? 'Viewing: ' + persona.persona().role : persona.persona().role }}</span>
-            <span class="role-badge">VIEW AS</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           @if (switcherOpen()) {
@@ -72,7 +71,7 @@ const PLACEHOLDERS: Record<PersonaKey, string> = {
                 <button class="ps-opt" [class.active]="p.key === persona.current()" (click)="switchTo(p.key)">
                   <span class="pic" [style.background]="p.color"><app-icon [name]="p.icon" [size]="18" /></span>
                   <span><span class="pn">{{ p.role }}</span><span class="pd">{{ p.name }} — {{ p.desc }}</span></span>
-                  @if (p.key === persona.current()) { <span class="cur">VIEWING AS</span> }
+                  @if (p.key === persona.current()) { <span class="cur"></span> }
                 </button>
               }
             </div>
