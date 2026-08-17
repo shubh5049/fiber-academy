@@ -1,1 +1,200 @@
-<p>view-as works!</p>
+<h1 class="page-h">View As…</h1>
+<p class="page-sub">
+  Preview the portal exactly as any persona sees it — for support, content validation, or demos.
+  This is a read-only overlay; you stay signed in as Super User.
+</p>
+<div class="people-row">
+  <div class="person-card">
+    <div class="pc-av" style="background: #00a8e0">
+      <svg
+        viewBox="0 0 24 24"
+        width="28"
+        height="28"
+        fill="none"
+        stroke="#fff"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    </div>
+    <div class="pc-role">Trainee</div>
+    <div class="pc-name">Dane Johnson</div>
+    <div class="pc-meta">New technician — Cohort July-07</div>
+    <div class="pc-contact">
+      <button class="btn sm" onclick="switchPersona('trainee', true)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m16 3 4 4-4 4"></path>
+          <path d="M20 7H4"></path>
+          <path d="m8 21-4-4 4-4"></path>
+          <path d="M4 17h16"></path></svg
+        >View as Trainee
+      </button>
+    </div>
+  </div>
+  <div class="person-card">
+    <div class="pc-av" style="background: #0568ae">
+      <svg
+        viewBox="0 0 24 24"
+        width="28"
+        height="28"
+        fill="none"
+        stroke="#fff"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M2 3h20"></path>
+        <path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"></path>
+        <path d="m7 21 5-5 5 5"></path>
+        <path d="M12 16v5"></path>
+      </svg>
+    </div>
+    <div class="pc-role">Instructor</div>
+    <div class="pc-name">Tomás Nguyen</div>
+    <div class="pc-meta">Leads live training · 2 cohorts</div>
+    <div class="pc-contact">
+      <button class="btn sm" onclick="switchPersona('instructor', true)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m16 3 4 4-4 4"></path>
+          <path d="M20 7H4"></path>
+          <path d="m8 21-4-4 4-4"></path>
+          <path d="M4 17h16"></path></svg
+        >View as Instructor
+      </button>
+    </div>
+  </div>
+  <div class="person-card">
+    <div class="pc-av" style="background: #2ca01c">
+      <svg
+        viewBox="0 0 24 24"
+        width="28"
+        height="28"
+        fill="none"
+        stroke="#fff"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h1"></path>
+        <path d="M15 18H9"></path>
+        <path
+          d="M19 18h1a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.68-.95l-1.92-.64a1 1 0 0 1-.58-.5l-1.54-3.08A1 1 0 0 0 15.38 8H14"
+        ></path>
+        <circle cx="17" cy="18" r="2"></circle>
+        <circle cx="7" cy="18" r="2"></circle>
+      </svg>
+    </div>
+    <div class="pc-role">Mentor</div>
+    <div class="pc-name">Rob Castillo</div>
+    <div class="pc-meta">Field mentor · ride-alongs</div>
+    <div class="pc-contact">
+      <button class="btn sm" onclick="switchPersona('mentor', true)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m16 3 4 4-4 4"></path>
+          <path d="M20 7H4"></path>
+          <path d="m8 21-4-4 4-4"></path>
+          <path d="M4 17h16"></path></svg
+        >View as Mentor
+      </button>
+    </div>
+  </div>
+  <div class="person-card">
+    <div class="pc-av" style="background: #6e4b9e">
+      <svg
+        viewBox="0 0 24 24"
+        width="28"
+        height="28"
+        fill="none"
+        stroke="#fff"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+        <path d="M18 17V9"></path>
+        <path d="M13 17V5"></path>
+        <path d="M8 17v-3"></path>
+      </svg>
+    </div>
+    <div class="pc-role">Manager</div>
+    <div class="pc-name">Denise Park</div>
+    <div class="pc-meta">Oversees 14 trainees</div>
+    <div class="pc-contact">
+      <button class="btn sm" onclick="switchPersona('manager', true)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m16 3 4 4-4 4"></path>
+          <path d="M20 7H4"></path>
+          <path d="m8 21-4-4 4-4"></path>
+          <path d="M4 17h16"></path></svg
+        >View as Manager
+      </button>
+    </div>
+  </div>
+  <div class="person-card">
+    <div class="pc-av" style="background: #0b7a8c">
+      <svg
+        viewBox="0 0 24 24"
+        width="28"
+        height="28"
+        fill="none"
+        stroke="#fff"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+        ></path>
+        <circle cx="12" cy="12" r="3"></circle>
+      </svg>
+    </div>
+    <div class="pc-role">Operations</div>
+    <div class="pc-name">Sana Malik</div>
+    <div class="pc-meta">Program operations &amp; enrollment</div>
+    <div class="pc-contact">
+      <button class="btn sm" onclick="switchPersona('operations', true)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m16 3 4 4-4 4"></path>
+          <path d="M20 7H4"></path>
+          <path d="m8 21-4-4 4-4"></path>
+          <path d="M4 17h16"></path></svg
+        >View as Operations
+      </button>
+    </div>
+  </div>
+  <div class="person-card">
+    <div class="pc-av" style="background: #37475a">
+      <svg
+        viewBox="0 0 24 24"
+        width="28"
+        height="28"
+        fill="none"
+        stroke="#fff"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+        ></path>
+        <path d="m9 12 2 2 4-4"></path>
+      </svg>
+    </div>
+    <div class="pc-role">Administrator</div>
+    <div class="pc-name">Sys Admin</div>
+    <div class="pc-meta">System configuration &amp; users</div>
+    <div class="pc-contact">
+      <button class="btn sm" onclick="switchPersona('admin', true)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m16 3 4 4-4 4"></path>
+          <path d="M20 7H4"></path>
+          <path d="m8 21-4-4 4-4"></path>
+          <path d="M4 17h16"></path></svg
+        >View as Administrator
+      </button>
+    </div>
+  </div>
+</div>

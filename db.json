@@ -1,0 +1,46 @@
+{
+  "my-climb": {
+    "weeks": [
+      {
+        "id": 8,
+        "title": "Certification & Solo",
+        "completed": false
+      },
+      {
+        "id": 7,
+        "title": "Expert Path Repair",
+        "completed": false
+      },
+      {
+        "id": 6,
+        "title": "Expert Path Install II",
+        "completed": false
+      },
+      {
+        "id": 5,
+        "title": "Expert Path Install I",
+        "completed": false
+      },
+      {
+        "id": 4,
+        "title": "Fiber Installation II",
+        "completed": false
+      },
+      {
+        "id": 3,
+        "title": "Fiber Installation I",
+        "completed": true
+      },
+      {
+        "id": 2,
+        "title": "Safety Fundamentals",
+        "completed": true
+      },
+      {
+        "id": 1,
+        "title": "Ladder & Pole Aptitude",
+        "completed": true
+      }
+    ]
+  }
+}

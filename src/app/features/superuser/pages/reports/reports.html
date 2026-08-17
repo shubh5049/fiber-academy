@@ -1,1 +1,188 @@
-<p>reports works!</p>
+<h1 class="page-h">Reports</h1>
+<p class="page-sub">
+  Generate and export program reports. Filter by cohort, date range, and status, then export to
+  share.
+</p>
+<div class="panel">
+  <h4>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg
+    >Filters
+  </h4>
+  <div class="fld-row" style="margin-top: 6px">
+    <div class="fld" style="margin: 0">
+      <label>Cohort</label
+      ><select>
+        <option>All cohorts</option>
+        <option>July-07</option>
+        <option>June-23</option>
+        <option>May-12</option>
+      </select>
+    </div>
+    <div class="fld" style="margin: 0">
+      <label>Date range</label
+      ><select>
+        <option>This week</option>
+        <option>This month</option>
+        <option>Program to date</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="section-h">
+  <h3>Available reports</h3>
+  <div class="ln"></div>
+</div>
+<div class="cohort-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))">
+  <div class="panel" style="margin: 0">
+    <h4 style="margin-bottom: 4px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect width="8" height="4" x="8" y="2" rx="1"></rect>
+        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+        <path d="M12 11h4"></path>
+        <path d="M12 16h4"></path>
+        <path d="M8 11h.01"></path>
+        <path d="M8 16h.01"></path></svg
+      >Attendance Tracking
+    </h4>
+    <p style="min-height: 38px">
+      Session &amp; ride-along attendance by trainee, cohort, and week.
+    </p>
+    <div style="display: flex; gap: 8px; margin-top: 10px">
+      <button class="btn ghost sm" onclick="openReport('Attendance Tracking')">View</button
+      ><button
+        class="btn outline sm"
+        onclick="toast('Export ready', 'Attendance Tracking downloaded as .csv')"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <path d="m7 10 5 5 5-5"></path>
+          <path d="M12 15V3"></path>
+        </svg>
+        Export
+      </button>
+    </div>
+  </div>
+  <div class="panel" style="margin: 0">
+    <h4 style="margin-bottom: 4px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+        <path d="M18 17V9"></path>
+        <path d="M13 17V5"></path>
+        <path d="M8 17v-3"></path></svg
+      >Cohort Performance
+    </h4>
+    <p style="min-height: 38px">Average progress, scores, and pace across active cohorts.</p>
+    <div style="display: flex; gap: 8px; margin-top: 10px">
+      <button class="btn ghost sm" onclick="openReport('Cohort Performance')">View</button
+      ><button
+        class="btn outline sm"
+        onclick="toast('Export ready', 'Cohort Performance downloaded as .csv')"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <path d="m7 10 5 5 5-5"></path>
+          <path d="M12 15V3"></path>
+        </svg>
+        Export
+      </button>
+    </div>
+  </div>
+  <div class="panel" style="margin: 0">
+    <h4 style="margin-bottom: 4px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path
+          d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+        ></path>
+        <path d="M22 10v6"></path>
+        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg
+      >Graduation Tracking
+    </h4>
+    <p style="min-height: 38px">On-time graduation rates and completion forecasting.</p>
+    <div style="display: flex; gap: 8px; margin-top: 10px">
+      <button class="btn ghost sm" onclick="openReport('Graduation Tracking')">View</button
+      ><button
+        class="btn outline sm"
+        onclick="toast('Export ready', 'Graduation Tracking downloaded as .csv')"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <path d="m7 10 5 5 5-5"></path>
+          <path d="M12 15V3"></path>
+        </svg>
+        Export
+      </button>
+    </div>
+  </div>
+  <div class="panel" style="margin: 0">
+    <h4 style="margin-bottom: 4px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="m12 14 4-4"></path>
+        <path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg
+      >Competency Assessments
+    </h4>
+    <p style="min-height: 38px">Weekly checkpoint pass rates and final assessment outcomes.</p>
+    <div style="display: flex; gap: 8px; margin-top: 10px">
+      <button class="btn ghost sm" onclick="openReport('Competency Assessments')">View</button
+      ><button
+        class="btn outline sm"
+        onclick="toast('Export ready', 'Competency Assessments downloaded as .csv')"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <path d="m7 10 5 5 5-5"></path>
+          <path d="M12 15V3"></path>
+        </svg>
+        Export
+      </button>
+    </div>
+  </div>
+  <div class="panel" style="margin: 0">
+    <h4 style="margin-bottom: 4px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+        <path d="M8 8h8M8 12h8M8 16h5"></path></svg
+      >Survey Results
+    </h4>
+    <p style="min-height: 38px">Mid-program and post-program learner feedback / NPS.</p>
+    <div style="display: flex; gap: 8px; margin-top: 10px">
+      <button class="btn ghost sm" onclick="openReport('Survey Results')">View</button
+      ><button
+        class="btn outline sm"
+        onclick="toast('Export ready', 'Survey Results downloaded as .csv')"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <path d="m7 10 5 5 5-5"></path>
+          <path d="M12 15V3"></path>
+        </svg>
+        Export
+      </button>
+    </div>
+  </div>
+  <div class="panel" style="margin: 0">
+    <h4 style="margin-bottom: 4px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle></svg
+      >Learner Scorecards
+    </h4>
+    <p style="min-height: 38px">
+      Individual scorecard rollups for manager &amp; instructor review.
+    </p>
+    <div style="display: flex; gap: 8px; margin-top: 10px">
+      <button class="btn ghost sm" onclick="openReport('Learner Scorecards')">View</button
+      ><button
+        class="btn outline sm"
+        onclick="toast('Export ready', 'Learner Scorecards downloaded as .csv')"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <path d="m7 10 5 5 5-5"></path>
+          <path d="M12 15V3"></path>
+        </svg>
+        Export
+      </button>
+    </div>
+  </div>
+</div>

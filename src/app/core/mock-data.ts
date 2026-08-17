@@ -44,6 +44,44 @@ export const MODULES: Module[] = [
   { id: 8, wk: 8, name: 'Certification & Solo',   icon: 'cert',   yt: '5MgBikgcWnY', thumb: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=640&q=70', desc: 'Final competency assessment, solo dispatch and sign-off.', done: false, type: 'assess' },
 ];
 
+export interface WeekData {
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
+export interface MyClimbData {
+  currentWeek: number;
+  totalWeeks: number;
+  weeks: WeekData[];
+}
+
+/**
+ * Dynamic mock API response derived from MODULES.
+ * Works exactly like a backend contract.
+ */
+export function buildMyClimbApi(): MyClimbData {
+  const orderedModules = [...MODULES].sort(
+    (a, b) => a.wk - b.wk
+  );
+
+  const currentWeek =
+    orderedModules.find(m => !m.done)?.wk ??
+    orderedModules.length;
+
+  return {
+    currentWeek,
+    totalWeeks: orderedModules.length,
+    weeks: [...MODULES]
+      .sort((a, b) => b.wk - a.wk)
+      .map(module => ({
+        id: module.wk,
+        title: module.name,
+        completed: module.done
+      }))
+  };
+}
+
 export const TRAINEES: Trainee[] = [
   { id: 't1', name: 'Dane Johnson', cohort: 'July-07', wk: 5, pr: 62, status: 'active', mentor: 'Rob Castillo', mgr: 'Denise Park', att: 96, score: 88, you: true },
   { id: 't2', name: 'Maria Jimenez', cohort: 'July-07', wk: 6, pr: 75, status: 'active', mentor: 'Lena Owens', mgr: 'Denise Park', att: 100, score: 93 },
